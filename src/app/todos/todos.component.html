@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-lg-4 col-md-4">
+            <app-todo-form (taskDataEvent)="receiveTask($event)"></app-todo-form>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <app-todo-list [highPriorityList]="highPriorityTasks" [lowPriorityList]="lowPriorityTasks" [mediumPriorityList]="mediumPriorityTasks"></app-todo-list>
+        </div>
+    </div>
+</div>
