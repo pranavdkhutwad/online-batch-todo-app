@@ -1,11 +1,50 @@
 <div class="row">
     <div class="col-lg-4 col-md-4 border-right">
         <h5>High Priority Task</h5>
+        <div class="row">
+            <div class="col" >
+                <div class="card mb-3 border-danger" *ngFor="let task of highPriorityList">
+                    <div class="card-header bg-transparent d-flex justify-content-between">
+                        <h6>{{ task.taskName }}</h6>
+                        <span (click)="deleteTask(task.id)" class="oi oi-x text-danger"></span>
+                    </div>
+                    <div class="card-body">
+                        {{ task.taskDescription }}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-lg-4 col-md-4 border-right">
         <h5>Medium Priority Task</h5>
+        <div class="row">
+            <div class="col" >
+                <div class="card mb-3 border-warning" *ngFor="let task of mediumPriorityList">
+                    <div class="card-header bg-transparent d-flex justify-content-between">
+                        <h6>{{ task.taskName }}</h6>
+                        <span (click)="deleteTask(task.id)" class="oi oi-x text-danger"></span>
+                    </div>
+                    <div class="card-body">
+                        {{ task.taskDescription }}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-lg-4 col-md-4">
         <h5>Low Priority Task</h5>
+        <div class="row">
+            <div class="col" >
+                <div class="card mb-3 border-info" *ngFor="let task of lowPriorityList">
+                    <div class="card-header bg-transparent d-flex justify-content-between">
+                        <h6>{{ task.taskName }}</h6>
+                        <span (click)="deleteTask(task.id)" class="oi oi-x text-danger"></span>
+                    </div>
+                    <div class="card-body">
+                        {{ task.taskDescription }}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

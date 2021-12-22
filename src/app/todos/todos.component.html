@@ -4,7 +4,7 @@
             <app-todo-form (taskDataEvent)="receiveTask($event)"></app-todo-form>
         </div>
         <div class="col-lg-8 col-md-8">
-            <app-todo-list [highPriorityList]="highPriorityTasks" [lowPriorityList]="lowPriorityTasks" [mediumPriorityList]="mediumPriorityTasks"></app-todo-list>
+            <app-todo-list (deleteEvent)="listenDelete($event)" [highPriorityList]="highPriorityTasks" [lowPriorityList]="lowPriorityTasks" [mediumPriorityList]="mediumPriorityTasks"></app-todo-list>
         </div>
     </div>
 </div>
